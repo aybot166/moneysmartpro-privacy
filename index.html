@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoneySmartPro 隐私政策</title>
+  <style>
+    /* === Reset & Base === */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --text: #1a1a2e;
+      --text-secondary: #555;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e5e7eb;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --code-bg: #f1f5f9;
+      --badge-bg: #dbeafe;
+      --badge-text: #1e40af;
+      --max-width: 800px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --bg-secondary: #1e293b;
+        --text: #e2e8f0;
+        --text-secondary: #94a3b8;
+        --accent: #60a5fa;
+        --accent-hover: #3b82f6;
+        --border: #334155;
+        --card-bg: #1e293b;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --code-bg: #334155;
+        --badge-bg: #1e3a5f;
+        --badge-text: #93c5fd;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                   "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+                   Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* === Typography === */
+    h1 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    h2 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+    h3 { font-size: clamp(1rem, 2.5vw, 1.2rem); }
+    p  { margin-bottom: 1rem; }
+    a  {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    /* === Header === */
+    header {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    header .meta {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    header .badge {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+    }
+
+    /* === Main content === */
+    main {
+      flex: 1;
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--card-shadow);
+      transition: border-color 0.2s ease;
+    }
+
+    section:hover {
+      border-color: var(--accent);
+    }
+
+    section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    section h2 .icon {
+      font-size: 1.3rem;
+    }
+
+    section p,
+    section li {
+      color: var(--text-secondary);
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* === Code / inline === */
+    code {
+      background: var(--code-bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+    }
+
+    .highlight {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    /* === Footer === */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: underline;
+    }
+    footer a:hover { color: var(--accent); }
+
+    /* === Responsive === */
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1rem 1rem; }
+      main   { padding: 1.25rem 1rem 2rem; }
+      section { padding: 1rem 1rem; border-radius: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MoneySmartPro 隐私政策</h1>
+  <div class="meta">
+    <span>生效日期：2026 年 6 月 21 日</span>
+    <span class="badge">v1.0</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- 引言 -->
+  <section>
+    <h2><span class="icon">📋</span> 引言</h2>
+    <p>
+      MoneySmartPro（以下简称「我们」或「本应用」）深知个人隐私的重要性。
+      本隐私政策旨在向您清晰说明本应用如何对待您的数据。
+    </p>
+    <p>
+      <strong>核心承诺：本应用不收集、不上传、不分享您的任何个人数据。</strong>
+      所有数据仅保存在您的设备本地。
+    </p>
+  </section>
+
+  <!-- 数据收集与存储 -->
+  <section>
+    <h2><span class="icon">💾</span> 数据收集与存储</h2>
+    <p>
+      本应用 <strong>不会</strong> 向任何远程服务器发送您的数据。
+      您的所有数据仅存储在设备本地：
+    </p>
+    <ul>
+      <li>
+        <span class="highlight">应用数据</span> —
+        您的记账记录、分类设置、预算等核心数据全部保存在 iOS 本地存储中，
+        由 Apple Core Data 框架管理。
+      </li>
+      <li>
+        <span class="highlight">API 密钥</span> —
+        您自行提供的 DeepSeek API Key 仅存储在 iOS 钥匙串（Keychain）中，
+        受系统级加密保护。
+      </li>
+    </ul>
+    <p>
+      <strong>我们无法访问您的任何数据。</strong>
+      本应用没有后端服务器，不提供云端同步功能，不会将任何信息传输到开发者控制的任何服务器。
+    </p>
+  </section>
+
+  <!-- 第三方服务 -->
+  <section>
+    <h2><span class="icon">🔗</span> 第三方服务</h2>
+    <h3>DeepSeek API</h3>
+    <p>
+      本应用允许您<strong>自行配置</strong> DeepSeek API Key，
+      以实现 AI 智能记账分析功能。当您启用此功能时：
+    </p>
+    <ul>
+      <li>您的 API Key 仅保存在设备本地钥匙串中</li>
+      <li>AI 请求直接从您的设备发送到 DeepSeek API 服务器</li>
+      <li>我们不会经手、中转或记录您的任何 API 请求内容</li>
+    </ul>
+    <p>
+      使用 DeepSeek API 即表示您同意 DeepSeek 的服务条款：
+      <a href="https://platform.deepseek.com/terms" target="_blank" rel="noopener noreferrer">
+        platform.deepseek.com/terms
+      </a>
+    </p>
+    <p>
+      <strong>如您不提供 API Key，本应用所有功能均可正常离线使用，不受任何影响。</strong>
+    </p>
+  </section>
+
+  <!-- 内购订阅 -->
+  <section>
+    <h2><span class="icon">🛒</span> 内购与订阅</h2>
+    <p>
+      本应用通过 Apple App Store 内购（In-App Purchase）提供高级功能订阅。
+      所有支付流程由 Apple 处理，适用 Apple 的标准最终用户许可协议：
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+        Apple 标准 EULA
+      </a>
+    </p>
+    <ul>
+      <li>我们<strong>不收集、不存储</strong>您的任何支付信息</li>
+      <li>所有交易由 Apple 独立处理，我们仅收到订阅状态确认</li>
+      <li>您可在 iOS 系统设置中随时管理或取消订阅</li>
+    </ul>
+  </section>
+
+  <!-- 数据安全 -->
+  <section>
+    <h2><span class="icon">🔒</span> 数据安全</h2>
+    <p>
+      您的数据安全是我们的首要考虑。本应用的数据保护机制包括：
+    </p>
+    <ul>
+      <li><strong>全本地存储</strong> — 所有数据仅保存在您的设备上</li>
+      <li><strong>无服务器架构</strong> — 应用没有任何后端服务器，杜绝数据泄露风险</li>
+      <li><strong>无云同步</strong> — 数据不会自动上传到 iCloud 或任何云服务</li>
+      <li><strong>Keychain 加密</strong> — API Key 使用 iOS 系统级钥匙串加密存储</li>
+      <li><strong>无第三方分析</strong> — 本应用不集成任何数据分析、广告或追踪 SDK</li>
+    </ul>
+    <p>
+      <strong>由于所有数据均在本地，数据的安全性取决于您设备本身的安全性。</strong>
+      我们建议您为设备设置强密码并启用生物识别保护。
+    </p>
+  </section>
+
+  <!-- 用户权利 -->
+  <section>
+    <h2><span class="icon">👤</span> 用户权利</h2>
+    <p>
+      您对自己的数据拥有完全控制权：
+    </p>
+    <ul>
+      <li><strong>查看数据</strong> — 所有数据随时可在 App 内查看</li>
+      <li><strong>导出数据</strong> — 可通过 App 内功能导出您的数据</li>
+      <li><strong>删除数据</strong> — 可在 App 内清除数据，或直接删除 App</li>
+      <li><strong>一键清除</strong> — 删除 App 即永久删除所有本地数据，无需额外操作</li>
+    </ul>
+    <p>
+      由于我们<strong>不持有您的任何数据</strong>，因此也不存在传统意义上的「数据删除请求」—— 
+      您只需删除 App，所有数据即被彻底移除。
+    </p>
+  </section>
+
+  <!-- 儿童隐私 -->
+  <section>
+    <h2><span class="icon">🧒</span> 儿童隐私</h2>
+    <p>
+      本应用不针对 13 岁以下儿童设计，也不会故意收集儿童的个人信息。
+      由于本应用不在服务器端收集任何数据，不存在儿童数据泄露的风险。
+    </p>
+  </section>
+
+  <!-- 政策更新 -->
+  <section>
+    <h2><span class="icon">📝</span> 隐私政策更新</h2>
+    <p>
+      我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，
+      并在 App 内通知用户。建议您定期查阅本页面以了解最新信息。
+    </p>
+  </section>
+
+  <!-- 联系我们 -->
+  <section>
+    <h2><span class="icon">📧</span> 联系我们</h2>
+    <p>
+      如您对本隐私政策有任何疑问或建议，请通过以下方式与我们联系：
+    </p>
+    <ul>
+      <li>电子邮件：<code>privacy@moneysmartpro.app</code></li>
+    </ul>
+    <p>
+      我们将在收到邮件后尽快回复，通常不超过 7 个工作日。
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 MoneySmartPro ·
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple 标准 EULA</a>
+    ·
+    <a href="https://platform.deepseek.com/terms" target="_blank" rel="noopener noreferrer">DeepSeek 服务条款</a>
+  </p>
+  <p style="margin-top:0.25rem;">本页面托管于 GitHub Pages</p>
+</footer>
+
+</body>
+</html>
